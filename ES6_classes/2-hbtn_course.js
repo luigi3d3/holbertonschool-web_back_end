@@ -1,40 +1,40 @@
 class HolbertonCourse {
-    constructor(name, length, students) {
-      this._name = name;
-      this._length = length;
-      this._students = students;
-    }
+  constructor(name, length, students) {
+    this._name = name;
+    this._length = length;
+    this._students = students;
+  }
   
     // Getter y setter para el nombre del curso
-    get name() {
-      return this._name;
+  get name() {
+    return this._name;
+  }
+  set name(newName) {
+    if (typeof newName !== 'string') {
+      throw new TypeError('Name must be a string');
     }
-    set name(newName) {
-      if (typeof newName !== 'string') {
-        throw new TypeError('Name must be a string');
-      }
-      this._name = newName;
-    }
+    this._name = newName;
+   }
   
     // Getter y setter para la duración del curso
-    get length() {
-      return this._length;
+  get length() {
+    return this._length;
+  }
+  set length(newLength) {
+    if (typeof newLength !== 'number') {
+      throw new TypeError('Length must be a number');
     }
-    set length(newLength) {
-      if (typeof newLength !== 'number') {
-        throw new TypeError('Length must be a number');
-      }
-      this._length = newLength;
-    }
+    this._length = newLength;
+   }
   
     // Getter y setter para la lista de estudiantes
-    get students() {
+  get students() {
       return this._students;
-    }
-    set students(newStudents) {
-      if (!Array.isArray(newStudents) || newStudents.some(student => typeof student !== 'string')) {
-        throw new TypeError('Students must be an array of strings');
-      }
-      this._students = newStudents;
-    }
   }
+  set students(newStudents) {
+    if (!Array.isArray(newStudents) || newStudents.some(student => typeof student !== 'string')) {
+      throw new TypeError('Students must be an array of strings');
+    }
+    this._students = newStudents;
+  }
+}
