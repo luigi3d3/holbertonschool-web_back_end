@@ -16,7 +16,7 @@ export default class HolbertonCourse {
     this._students = students;
   }
   
-    // Getter y setter para el nombre del curso
+  // Getter y setter para el nombre del curso
   get name() {
     return this._name;
   }
@@ -27,7 +27,7 @@ export default class HolbertonCourse {
     this._name = newName;
   }
   
-    // Getter y setter para la duración del curso
+  // Getter y setter para la duración del curso
   get length() {
     return this._length;
   }
@@ -38,9 +38,9 @@ export default class HolbertonCourse {
     this._length = newLength;
   }
   
-    // Getter y setter para la lista de estudiantes
+  // Getter y setter para la lista de estudiantes
   get students() {
-      return this._students;
+    return this._students;
   }
   set students(newStudents) {
     if (!Array.isArray(newStudents) || newStudents.some(student => typeof student !== 'string')) {
