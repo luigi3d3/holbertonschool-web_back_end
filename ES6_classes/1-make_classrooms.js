@@ -1,4 +1,4 @@
-import ClassRoom from './0-classroom.js';
+import ClassRoom from './0-classroom';
 
 // Función para inicializar las aulas
 function initializeRooms() {
