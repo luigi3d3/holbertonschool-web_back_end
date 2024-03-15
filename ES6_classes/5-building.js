@@ -1,6 +1,8 @@
-// building.js
 class Building {
     constructor(sqft) {
+      if (this.constructor === Building) {
+        throw new Error('Abstract classes cannot be instantiated directly');
+      }
       this._sqft = sqft;
     }
   
@@ -8,14 +10,8 @@ class Building {
       return this._sqft;
     }
   
-    set sqft(newSqft) {
-      this._sqft = newSqft;
-    }
-  
     evacuationWarningMessage() {
       throw new Error('Class extending Building must override evacuationWarningMessage');
     }
   }
-  
-  export default Building;
   
